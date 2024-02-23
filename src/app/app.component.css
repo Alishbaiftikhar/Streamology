@@ -1,0 +1,268 @@
+@font-face {
+    font-family: sf pro display;
+    src: url(../assets/Fonts/SFPRODISPLAYBOLD.OTF);
+}
+
+@font-face {
+    font-family: sf pro display;
+    src: url(../assets/Fonts/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+    font-family: sf pro display;
+    src: url(../assets/Fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+body {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    background: linear-gradient(117deg, #010011 0%, #1A2A64 25%, #51629C 50%, #89C0E9 81%, #F1EDFA 100%) !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.heading {
+    left: 710px;
+    top: 20px;
+    position: absolute;
+    text-align: center;
+    color: #FCFBDC;
+    font-size: 48px;
+    font-family: sf pro display;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.92px;
+    word-wrap: break-word;
+}
+
+.form-container {
+    width: 1300px;
+    height: 778px;
+    left: 289px;
+    top: 150px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.19);
+    box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.40);
+    border-radius: 24px;
+    border: 1px white solid;
+    backdrop-filter: blur(9.60px)
+}
+
+#videoUploadForm {
+    width: 632px;
+    height: 705px;
+    position: absolute;
+    border-radius: 24px;
+    border: 1.50px;
+    left: 17px;
+    top: 27px;
+}
+
+.upload-container {
+    width: 632px;
+    height: 705px;
+    position: absolute;
+    border-radius: 24px;
+    border: 1.50px black dotted;
+    left: 940px;
+    top: 187px;
+}
+
+input {
+    width: 600px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.40);
+    border-radius: 10px;
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    margin-left: 10px;
+    color: black;
+    font-size: 18px;
+    font-family: sf pro display;
+
+}
+
+label {
+    color: #FCFBDC;
+    font-size: 20px;
+    font-family: sf pro display;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.80px;
+    word-wrap: break-word;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+textarea {
+    width: 600px;
+    height: 172px;
+    background: rgba(255, 255, 255, 0.40);
+    border-radius: 10px;
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    margin-left: 10px;
+    color: black;
+    font-size: 18px;
+    font-family: sf pro display;
+}
+
+select {
+    width: 290px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.40);
+    border-radius: 10px;
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    margin-left: 10px;
+}
+
+label,
+input,
+textarea,
+select,
+[type="date"] {
+
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+#button {
+    background: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.50);
+    border-radius: 10px
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    left: 276px;
+    top: 234px;
+    position: absolute
+}
+
+#text1 {
+    left: 201px;
+    top: 360px;
+    position: absolute;
+    text-align: center;
+    color: #F9F9F9;
+    font-size: 18px;
+    font-family: sf pro display;
+    font-weight: 400;
+    letter-spacing: 0.72px;
+    word-wrap: break-word;
+}
+
+#text2 {
+    left: 230px;
+    top: 324px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    font-family: sf pro display;
+    font-weight: 400;
+    letter-spacing: 0.88px;
+    word-wrap: break-word;
+}
+
+.file-input-container {
+    position: relative;
+    width: 122px;
+    height: 44px;
+    left: 230px;
+    top: 400px;
+}
+
+.file-input-wrapper {
+    width: 140px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #04051C;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.40);
+    border-radius: 8px;
+
+}
+
+.file-input-label {
+    width: 120px;
+    height: 24px;
+    position: absolute;
+    left: 14px;
+    top: 10px;
+}
+
+/* Hide the default file input style */
+#videoFile {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#showAll {
+    width: 195px;
+    height: 54px;
+    left: 400px;
+    top: -165px;
+    position: absolute;
+    background: #04051C;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.40);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    letter-spacing: 0.72px;
+    word-wrap: break-word;
+    border: none;
+
+}
+.filled {
+    background-color: #a0d3e8;
+  }
+  .keyword-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .keyword {
+    background-color: #043274; 
+    color: white; 
+    padding: 5px 10px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    border: 1px solid white;
+  }
+  input::placeholder {
+    color: #ECECEC;
+    font-size: 16px;
+    font-family: SF Pro Display;
+    font-weight: 200;
+    letter-spacing: 0.72px;
+    word-wrap: break-word
+  }
+  textarea::placeholder {
+    color: #ECECEC;
+    font-size: 16px;
+    font-family: sf pro display;
+    font-weight: 300;
+    letter-spacing: 0.72px;
+    word-wrap: break-word
+  }
+  #date{
+    color: black;
+    font-family: sf pro display;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .parent-container{
+    background: url(../assets/macbook.png);
+    height: 100vh;
+    background-size: cover ;
+  }
