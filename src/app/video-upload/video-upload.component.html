@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video-Hub Panel</title>
+</head>
+
+<body>
+
+  <div class="parent-container">
+    <div class="sidebar" >
+      <div class="sidebarHeading">Video<br/>Management<br/>system</div>
+      <div class="line"></div>
+      <div class="search">Search:</div>
+  <input style="left: 12px; top: 230px; position: absolute" type="radio" id="html" name="fav_language" value="HTML">
+  <label style="left: 42px; top: 231px; position: absolute" for="html">Title</label> 
+  <input style="left: 150px; top: 230px; position: absolute"type="radio" id="css" name="fav_language" value="CSS">
+  <label style="left: 180px; top: 231px; position: absolute"for="css">Location</label><br>
+  <div class="searchbar" >
+<input type="text" id="searchcontent" name="name" placeholder="Search here" required>
+<button id="searchbutton" type="submit">
+  <img src="../../assets/Search.svg" alt="search icon" style="width: 18px; height: 18px; margin-left: 10px; margin-top: 10px;">
+</button>
+</div>
+<label id="categorylabel" >Category:</label>
+<select id="dropdown1" name="dropdown1"  [(ngModel)]="selectedCategory">
+    <option value="0">Select Category</option>
+    <option value="east">East</option>
+    <option value="west">West</option>
+    <option value="Internal">Internal</option>
+  </select>
+
+  <label for="dropdown2" id="labeldrop2" >Sub Category</label>
+  <select [ngSwitch]="selectedCategory" id="dropdown2" name="dropdown2" >
+    <option *ngSwitchCase="'east'" value="0">Choose subcategory</option>
+    <option *ngSwitchCase="'east'" value="MIT">MILITARY</option>
+    <option *ngSwitchCase="'east'" value="IIOJK">IIOJK</option>
+    <option *ngSwitchCase="'east'" value="IAK">IAK</option>
+    <option *ngSwitchCase="'east'" value="IN">IN</option>
+    <option *ngSwitchCase="'east'" value="MIN">MIN</option>
+    <option *ngSwitchCase="'west'" value="0">Choose subcategory</option>
+    <option *ngSwitchCase="'west'" value="IRAN">IRAN</option>
+    <option *ngSwitchCase="'west'" value="AFG">AFGHANISTAN</option>
+    <option *ngSwitchCase="'Internal'" value="0">Choose subcategory</option>
+    <option *ngSwitchCase="'Internal'" value="POLITICAL">POLITICAL</option>
+    <option *ngSwitchCase="'Internal'" value="ANTI-ARMY">ANTI-ARMY</option>
+    <option *ngSwitchCase="'Internal'" value="ANTI-STATE">ANTI-STATE</option>
+    <option *ngSwitchCase="'Internal'" value="ANTI-GOVT">ANTI-GOVT</option>
+    <option *ngSwitchCase="'Internal'" value="RELIGION">RELIGION</option>
+    <option *ngSwitchCase="'Internal'" value="PTI">PTI</option>
+    <option *ngSwitchCase="'Internal'" value="PRINT-MEDIA">PRINT-MEDIA</option>
+    <option *ngSwitchCase="'Internal'" value="ELECTRONIC-MEDIA">ELECTRONIC-MEDIA</option>
+
+  </select>
+<button id="Addvideo" type="submit">
+  <img src="../../assets/Group 7.svg" alt="search icon" style="width: 30px; height: 30px; ">
+  Add new Video
+</button>
+    </div>
+
+<div class="midcontainer" >
+  <div class="heading2">Selected Category</div>
+  <div class="tiles">
+    <ng-container *ngFor="let video of videos">
+  <app-videotile [video]="video"></app-videotile>
+</ng-container>
+</div>
+</div> 
+</div>
+</body>
+</html>

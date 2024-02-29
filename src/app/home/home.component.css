@@ -16,49 +16,15 @@
 body {
     width: 100% !important;
     height: 100% !important;
-    background: linear-gradient(117deg, #010011 0%, #1A2A64 25%, #51629C 50%, #89C0E9 81%, #F1EDFA 100%) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.parent-container {
-    width: 1920px;
-    height: 1080px;
     position: relative !important;
     background: linear-gradient(117deg, #010011 0%, #1A2A64 25%, #51629C 50%, #89C0E9 81%, #F1EDFA 100%) !important;
-    /* justify-content: center !important; */
-    /* align-items: center !important; */
-    /* flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start;  */
-    display: flex;
-    top:80px;
-}
-
-.sidebar {
-    width: 300px;
-    height: 920px;
-    background: rgba(255, 255, 255, 0.40);
-    border-radius: 16px;
-    border: 2px rgba(0, 0, 0, 0.65) solid;
-    margin-left: 2px;
-}
-
-.midcontainer {
-    width: 1400px;
-    height: 920px;
-    flex: 1;
-    background: rgba(255, 255, 255, 0.20);
-    border-radius: 16px;
-    border: 1px rgba(0, 0, 0, 0.65) solid;
-    margin-right: 10px;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .heading {
     left: 710px;
-    top: 20px;
+    top: 85px;
     position: absolute;
     text-align: center;
     color: #FCFBDC;
@@ -68,177 +34,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.92px;
     word-wrap: break-word;
-    display: flex;
 }
 
-.sidebarHeading {
-    left: 32px;
-    top: 32px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 32px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.28px;
-    word-wrap: break-word;
-}
-
-.line {
-    width: 303px;
-    height: 0px;
-    left: 0px;
-    top: 178px;
-    position: absolute;
-    border: 1px black solid;
-}
-
-.search {
-    left: 16px;
-    top: 194px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 20px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 0.80px;
-    word-wrap: break-word
-}
-
-.searchbar {
-    width: 285px;
-    height: 45px;
-    left: 10px;
-    top: 288px;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.40);
-    border-radius: 10px;
-    border: 1px rgba(0, 0, 0, 0.65) solid;
-
-}
-
-#searchcontent {
-    left: 5px;
-    top: 5px;
-    position: absolute;
-    color: black;
-    font-size: 18px;
-    font-family: SF Pro Display;
-    font-weight: 400;
-    letter-spacing: 0.72px;
-    word-wrap: break-word;
-    border: transparent;
-    background: transparent;
-}
-
-#searchbutton {
-    margin-left: 220px;
-    width: 50px;
-    margin-top: -3px;
-    border: transparent;
-    background: transparent;
-}
-
-input::placeholder {
-    color: black;
-    font-weight: lighter;
-}
-
-#categorylabel {
-    left: 16px;
-    top: 355px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 20px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 0.80px;
-    word-wrap: break-word
-}
-
-select {
-    width: 290px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.40);
-    border-radius: 10px;
-    border: 1px rgba(0, 0, 0, 0.65) solid;
-    margin-left: 10px;
-}
-
-#dropdown1 {
-    left: 0px;
-    top: 395px;
-    position: absolute;
-}
-
-#subcategoryLabel {
-    left: 16px;
-    top: 460px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 20px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 0.80px;
-    word-wrap: break-word;
-}
-
-#dropdown2 {
-    left: 0px;
-    top: 500px;
-    position: absolute;
-}
-
-#Addvideo {
-    width: 280px;
-    height: 64px;
-    background: #04051C;
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.40);
-    border-radius: 10px;
-    margin-top: 800px;
-    margin-left: 8px;
-    color: white;
-    font-size: 18px;
-    font-family: SF Pro Display;
-    font-weight: 500;
-    letter-spacing: 0.72px;
-    word-wrap: break-word;
-}
-
-.heading2 {
-    left: 406px;
-    top: 48px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 40px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 1.60px;
-    word-wrap: break-word
-}
-#labeldrop2{
-    left: 16px;
-    top: 455px;
-    position: absolute;
-    color: #FCFBDC;
-    font-size: 20px;
-    font-family: SF Pro Display;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 0.80px;
-    word-wrap: break-word;
-}
-.tiles{
-    display: flex;
-    margin-top: 100px;
-    margin-left: 10px;
-
-}
-/* 
 .form-container {
     width: 1300px;
     height: 778px;
@@ -268,8 +65,8 @@ select {
     position: absolute;
     border-radius: 24px;
     border: 1.50px black dotted;
-    left: 940px;
-    top: 187px;
+    left: 640px;
+    top: 10px;
 }
 
 input {
@@ -336,6 +133,12 @@ select,
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.50);
     border-radius: 10px
 }
+#button:hover {
+    background: black;
+    color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.50);
+    border-radius: 10px
+}
 
 img {
     width: 80px;
@@ -390,7 +193,10 @@ img {
     border-radius: 8px;
 
 }
-
+.file-upload{
+    margin-top: 400px;
+    margin-left: 230px;
+}
 .file-input-label {
     width: 120px;
     height: 24px;
@@ -400,7 +206,7 @@ img {
 }
 
 /* Hide the default file input style */
-/* #videoFile {
+#videoFile {
     opacity: 0;
     position: absolute;
     z-index: -1;
@@ -409,8 +215,8 @@ img {
 #showAll {
     width: 195px;
     height: 54px;
-    left: 400px;
-    top: -165px;
+    left: 1400px;
+    top: 85px;
     position: absolute;
     background: #04051C;
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.40);
@@ -465,7 +271,7 @@ img {
     text-transform: uppercase;
   }
   .parent-container{
-    background: url(../Assets/macbook.png);
+    background: url(../../assets/macbook.png) no-repeat center center fixed;
     height: 100vh;
     background-size: cover ;
-  }  */
+  }

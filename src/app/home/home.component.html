@@ -1,0 +1,100 @@
+<body>
+    <div class="parent-container">
+      </div>
+      <div class="heading">Video-Hub Panel</div>
+      <div class="form-container">
+        <form id="videoUploadForm" [formGroup]="videoUploadForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+          <label for="videoTitle">Video Title:</label>
+          <input type="text" id="name"  formControlName="name" placeholder="Write video title here..." required>
+          <label for="videoDescription">Video Description:</label>
+          <textarea id="description" name="description" rows="4" formControlName="description" placeholder="Write video description here..."></textarea>
+    
+          <label for="Location">Location</label>
+          <input type="text" id="location" name="location"  formControlName="location" placeholder="Enter Location here...">
+          <label for="dropdown1" >Category</label>
+          <label for="dropdown2"  style="margin-left: 200px">Sub Category</label>
+          <select id="dropdown1" name="dropdown1" formControlName="category" [(ngModel)]="selectedCategory" >
+            <option value="0">Select Category</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="Internal">Internal</option>
+          </select>
+    
+          <!-- <label for="dropdown2"  style="margin-left: 200px">Sub Category</label> -->
+          <select [ngSwitch]="selectedCategory" id="dropdown2" formControlName="subcategory" name="dropdown2">
+            <option *ngSwitchCase="'east'" value="0">Choose subcategory</option>
+            <option *ngSwitchCase="'east'" value="MIT">MILITARY</option>
+            <option *ngSwitchCase="'east'" value="IIOJK">IIOJK</option>
+            <option *ngSwitchCase="'east'" value="IAK">IAK</option>
+            <option *ngSwitchCase="'east'" value="IN">IN</option>
+            <option *ngSwitchCase="'east'" value="MIN">MIN</option>
+            <option *ngSwitchCase="'west'" value="0">Choose subcategory</option>
+            <option *ngSwitchCase="'west'" value="IRAN">IRAN</option>
+            <option *ngSwitchCase="'west'" value="AFG">AFGHANISTAN</option>
+            <option *ngSwitchCase="'Internal'" value="0">Choose subcategory</option>
+            <option *ngSwitchCase="'Internal'" value="POLITICAL">POLITICAL</option>
+            <option *ngSwitchCase="'Internal'" value="ANTI-ARMY">ANTI-ARMY</option>
+            <option *ngSwitchCase="'Internal'" value="ANTI-STATE">ANTI-STATE</option>
+            <option *ngSwitchCase="'Internal'" value="ANTI-GOVT">ANTI-GOVT</option>
+            <option *ngSwitchCase="'Internal'" value="RELIGION">RELIGION</option>
+            <option *ngSwitchCase="'Internal'" value="PTI">PTI</option>
+            <option *ngSwitchCase="'Internal'" value="PRINT-MEDIA">PRINT-MEDIA</option>
+            <option *ngSwitchCase="'Internal'" value="ELECTRONIC-MEDIA">ELECTRONIC-MEDIA</option>
+    
+          </select>
+    
+    
+          <label for="videoDate">Date</label>
+          <input type="date" id="date" formControlName="date" name="date">
+    
+          <label for="keywords">Keywords</label>
+          <input type="text" id="keywords" formControlName="keywords" name="keywords" [(ngModel)]="keywordsInput" (input)="updateKeywords()" placeholder="Enter keywords separated by spaces">
+          <div class="keyword-container">
+            <div *ngFor="let keyword of keywords" class="keyword filled">{{ keyword }}</div>
+          </div>
+    
+          <input id="button" type="submit" value="submit" />
+        <!-- </form> -->
+        
+      <!-- </div> -->
+      <div class="upload-container">
+        <div class="media-upload">
+          <img src="../../assets/fileupload.svg" alt="Upload Icon">
+          <div id="text2">Select your file! </div>
+          <div id="text1">Only videos files supported! </div>
+          <div class="file-input-container">
+            <div class="file-input-wrapper"> </div>
+            <img src="../../assets/ppr upload.svg" style="top: 0;left: 0;width: 25px;height: 40px;margin-left: 7px;"
+              alt="Browse Icon">
+            <div class="file-input-label">
+              <label for="videoFile" style="cursor: pointer; color: #FFF; margin-left: 18px">Browse</label>
+              <input formControlName="video" type="file" id="videoFile" (change)="onFileSelected($event)" name="video" accept="video/*" required>
+            </div>
+            <!-- <div class="file-upload">
+    
+              {{ fileName || "No file uploaded yet."}}
+            </div> -->
+            <div class="progress">
+    
+              <!-- <mat-progress-bar  class="progress-bar" mode="determinate"
+              [value]="uploadProgress" *ngIf="uploadProgress" >
+          
+              </mat-progress-bar>
+             -->
+              <!-- <mat-icon class="cancel-upload" (click)="cancelUpload()" 
+                        *ngIf="uploadProgress">delete_forever</mat-icon> -->
+            
+            </div>
+          </div>
+          <div class="file-upload">
+    
+            {{ fileName || "No file uploaded yet."}}
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+    <button id="showAll" title="Show all videos" [routerLink]="['/videos']" routerLinkActive="active" >  Show all videos</button>
+    </body>
+
+    
