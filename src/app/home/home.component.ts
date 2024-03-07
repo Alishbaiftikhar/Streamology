@@ -39,6 +39,7 @@ export class HomeComponent {
    // Enable or disable dropdown2 based on dropdown1 value
    this.videoUploadForm.get('category')?.valueChanges.subscribe((value) => {
      const dropdown2Control = this.videoUploadForm.get('subcategory');
+    //  console.log(dropdown2Control);
      if (value !== '0') {
        dropdown2Control?.enable();
      } else {
@@ -75,12 +76,17 @@ this.fileName = this.selectedFile?.name;
    
    // Handle form submission
    if (this.videoUploadForm.valid) {
+    const locationValue = this.videoUploadForm.get('location')?.value?.toLowerCase();
+    const nameValue = this.videoUploadForm.get('name')?.value?.toLowerCase();
+
+    // Update the form values with lowercase values
+    this.videoUploadForm.patchValue({ location: locationValue, name: nameValue });
      const formData = new FormData();
      Object.keys(this.videoUploadForm.value).forEach(key => {
        formData.append(key, this.videoUploadForm.get(key)?.value);
      });
      const videoFileControl = this.videoUploadForm.get("video");
-
+console.log(this.videoUploadForm.get('subcategory'));
 if (videoFileControl ) {
  const videoFileValue = videoFileControl.value;
 

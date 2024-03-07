@@ -34,7 +34,7 @@ body {
     justify-content: flex-start; 
     align-items: flex-start;  */
     display: flex;
-    top:80px;
+    top: 80px;
 }
 
 .sidebar {
@@ -54,6 +54,7 @@ body {
     border-radius: 16px;
     border: 1px rgba(0, 0, 0, 0.65) solid;
     margin-right: 10px;
+    overflow-y: auto;
 }
 
 .heading {
@@ -120,7 +121,7 @@ body {
 
 #searchcontent {
     left: 5px;
-    top: 5px;
+    top: 8px;
     position: absolute;
     color: black;
     font-size: 18px;
@@ -133,11 +134,21 @@ body {
 }
 
 #searchbutton {
-    margin-left: 220px;
-    width: 50px;
-    margin-top: -3px;
-    border: transparent;
+    margin-left: 240px;
+    width: 40px;
+    margin-top: 6px;
+    /* border: transparent; */
     background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+#searchbutton:hover {
+    border: 2px solid white;
+    
 }
 
 input::placeholder {
@@ -220,7 +231,8 @@ select {
     letter-spacing: 1.60px;
     word-wrap: break-word
 }
-#labeldrop2{
+
+#labeldrop2 {
     left: 16px;
     top: 455px;
     position: absolute;
@@ -232,12 +244,19 @@ select {
     letter-spacing: 0.80px;
     word-wrap: break-word;
 }
-.tiles{
-    display: flex;
+
+.tiles {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 35px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
     margin-top: 100px;
     margin-left: 10px;
 
 }
+
 /* 
 .form-container {
     width: 1300px;

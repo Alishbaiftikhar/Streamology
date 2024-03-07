@@ -1,0 +1,103 @@
+.video-tile {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9.28px;
+    border: 1px rgba(0, 0, 0, 0.15) solid;
+    padding: 10px;
+    height: 100%;
+}
+
+.listing-heading {
+    color: var(--primary-color);
+    padding: 10px 20px 0 20px;
+}
+
+.listing-video {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+    border-radius: 8.45px
+}
+
+.title {
+    color: black;
+    letter-spacing: 0.61px;
+    word-wrap: break-word;
+    margin-top: 2px;
+}
+
+.description {
+
+    color: #04051C;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    word-wrap: break-word;
+    margin-top: -15px;
+}
+
+.location {
+    color: #04051C;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.locationval {
+    color: white;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.category {
+    color: #04051C;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.categoryval {
+    color: white;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.subcategory {
+    color: #04051C;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.subcategoryval {
+    color: white;
+    font-size: 13.52px;
+    font-family: SF Pro Display;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    word-wrap: break-word
+}
+
+.keywordbtn {
+    margin-left: 10px;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgba(4, 5, 28, 0.75);
+    color: white;
+}

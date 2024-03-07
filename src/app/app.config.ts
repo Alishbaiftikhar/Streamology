@@ -5,8 +5,9 @@ import { routes } from './app.routes';
 import routeConfig from './routes';
 import { importProvidersFrom } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { DatePipe } from '@angular/common';
 export const appConfig: ApplicationConfig = {
   providers: [
     importProvidersFrom(HttpClientModule),
-    provideRouter(routes), provideAnimationsAsync()]
+    provideRouter(routes), provideAnimationsAsync(),DatePipe]
 };
